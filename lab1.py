@@ -23,7 +23,7 @@ def read_file(fd):
     return word_count
 
 def write_output(fd, word_count):
-    sorted_words = sorted(word_count.items(), key=lambda x: x[1], reverse=True)
+    sorted_words = sorted(word_count.items(), key=lambda x: x[1], reverse=True) #sort by count in descending order
     
     for word, count in sorted_words:
         line = f"{word} {count}\n".encode("utf-8")  # Encode to bytes
